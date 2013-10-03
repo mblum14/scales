@@ -7,10 +7,12 @@ def usage message
   exit 2
 end
 
-scale = nil
+scale_type = nil
 
 if ARGV[0]
-  scale = ARGV.shift
+  scale_type = ARGV.shift
 else
   usage "Need to provide scale"
 end
+
+puts Scale.new(scale_type)
