@@ -1,5 +1,6 @@
 require 'bundler'
 Bundler.require
+require File.join(File.dirname(__FILE__), 'Lib', 'Scale')
 
 def usage message
   $stderr.puts(message)
@@ -15,4 +16,4 @@ else
   usage "Need to provide scale"
 end
 
-puts Scale.new(scale_type)
+puts Scale.new(scale_type).to_s

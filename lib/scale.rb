@@ -16,7 +16,7 @@ class Scale
   end
 
   def to_s
-    notes
+    notes.join(', ')
   end
 
   def base_note_is_sharp?
