@@ -151,4 +151,75 @@ describe Scale do
       expect(Scale.new('G#maj').notes).to eql(['G#', 'C', 'D#'])
     end
   end
+  context "Diminished Scales" do
+    it "can create a Abdim scale" do
+      expect(Scale.new('Abdim').notes).to eql(['Ab', 'B', 'D'])
+    end
+    it "can create a Adim scale" do
+      expect(Scale.new('Adim').notes).to eql(['A', 'C', 'D#'])
+    end
+    it "can create a A#dim scale" do
+      expect(Scale.new('A#dim').notes).to eql(['A#', 'C#', 'E'])
+    end
+
+    it "can create a Bbdim scale" do
+      expect(Scale.new('Bbdim').notes).to eql(['Bb', 'Db', 'E'])
+    end
+    it "can create a Bdim scale" do
+      expect(Scale.new('Bdim').notes).to eql(['B', 'D', 'F'])
+    end
+    it "can create a B#dim scale" do
+      expect(Scale.new('B#dim').notes).to eql(['B#', 'D#', 'F#'])
+    end
+
+    it "can create a Cbdim scale" do
+      expect(Scale.new('Cbdim').notes).to eql(['Cb', 'D', 'F'])
+    end
+    it "can create a Cdim scale" do
+      expect(Scale.new('Cdim').notes).to eql(['C', 'D#', 'F#'])
+    end
+    it "can create a C#dim scale" do
+      expect(Scale.new('C#dim').notes).to eql(['C#', 'E', 'G'])
+    end
+
+    it "can create a Dbdim scale" do
+      expect(Scale.new('Dbdim').notes).to eql(['Db', 'E', 'G'])
+    end
+    it "can create a Ddim scale" do
+      expect(Scale.new('Ddim').notes).to eql(['D', 'F', 'G#'])
+    end
+    it "can create a D#dim scale" do
+      expect(Scale.new('D#dim').notes).to eql(['D#', 'F#', 'A'])
+    end
+
+    it "can create a Ebdim scale" do
+      expect(Scale.new('Ebdim').notes).to eql(['Eb', 'Gb', 'A'])
+    end
+    it "can create a Edim scale" do
+      expect(Scale.new('Edim').notes).to eql(['E', 'G', 'A#'])
+    end
+    it "can create a E#dim scale" do
+      expect(Scale.new('E#dim').notes).to eql(['E#', 'G#', 'B'])
+    end
+
+    it "can create a Fbdim scale" do
+      expect(Scale.new('Fbdim').notes).to eql(['Fb', 'G', 'Bb'])
+    end
+    it "can create a Fdim scale" do
+      expect(Scale.new('Fdim').notes).to eql(['F', 'G#', 'B'])
+    end
+    it "can create a F#dim scale" do
+      expect(Scale.new('F#dim').notes).to eql(['F#', 'A', 'C'])
+    end
+
+    it "can create a Gbdim scale" do
+      expect(Scale.new('Gbdim').notes).to eql(['Gb', 'A', 'C'])
+    end
+    it "can create a Gdim scale" do
+      expect(Scale.new('Gdim').notes).to eql(['G', 'A#', 'C#'])
+    end
+    it "can create a G#dim scale" do
+      expect(Scale.new('G#dim').notes).to eql(['G#', 'B', 'D'])
+    end
+  end
 end

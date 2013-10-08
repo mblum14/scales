@@ -29,6 +29,7 @@ class Scale
     half_steps = case @interval
                  when 'maj' then [0, 4, 3]
                  when 'min' then [0, 3, 4]
+                 when 'dim' then [0, 3, 3]
                  else [0]
                  end
     add_notes!(key, half_steps)
@@ -45,6 +46,6 @@ class Scale
   end
 
   def identify_parts scale_name
-    /(?<key>[ABCDEFG][b#]?)(?<interval>maj|min)/.match(scale_name).to_a
+    /(?<key>[ABCDEFG][b#]?)(?<interval>maj|min|dim)/.match(scale_name).to_a
   end
 end
