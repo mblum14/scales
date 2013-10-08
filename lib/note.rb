@@ -3,10 +3,9 @@ class Note
   attr_accessor :key
 
   KEYS = %W(Ab A Bb B C Db D Eb E F Gb G Ab)
-  WHITE_KEYS = %W(A B C D E F G)
 
   def self.starting_at(key)
-    Note.new(key)
+    Note.new(key.to_s)
   end
 
   def initialize key
@@ -24,26 +23,21 @@ class Note
 
   def == note
     if note.kind_of?(::Note)
-      note.force_flat == note.force_flat
+      note.to_flat == note.to_flat
     else
-      note.force_flat == note
+      note.to_flat == note
     end
   end
 
   def force_sharp!
-    @key = case key
-    when 'Ab' then 'G#'
-    when 'Bb' then 'A#'
-    when 'Cb' then 'B'
-    when 'Db' then 'C#'
-    when 'Eb' then 'D#'
-    when 'Fb' then 'E'
-    when 'Gb' then 'F#'
-    else key
-    end
+    @key = self.to_sharp
   end
 
-  def force_flat
+  def force_flat!
+    @key = self.to_flat
+  end
+
+  def to_flat
     case key
     when 'A#' then 'Bb'
     when 'B#' then 'C'
@@ -52,6 +46,19 @@ class Note
     when 'E#' then 'F'
     when 'F#' then 'Gb'
     when 'G#' then 'Ab'
+    else key
+    end
+  end
+
+  def to_sharp
+    case key
+    when 'Ab' then 'G#'
+    when 'Bb' then 'A#'
+    when 'Cb' then 'B'
+    when 'Db' then 'C#'
+    when 'Eb' then 'D#'
+    when 'Fb' then 'E'
+    when 'Gb' then 'F#'
     else key
     end
   end
@@ -73,7 +80,7 @@ class Note
 
   def prev_key
     idx_of_prev_key = (KEYS.index(normalize_lookup_key) % 12) - 1
-    KEYS[idx_of_next_key]
+    KEYS[idx_of_prev_key]
   end
 
   def normalize_lookup_key

@@ -27,14 +27,19 @@ class Scale
 
   def compute_notes!
     half_steps = case @interval
-            when 'maj'
-              [4, 3]
-            else
-              []
-            end
-    @notes << Note.new(key)
-    @notes << Note.starting_at(key).step_up(half_steps.first)
-    @notes << Note.starting_at(key).step_up(half_steps.reduce(:+))
+                 when 'maj' then [0, 4, 3]
+                 else [0]
+                 end
+    add_notes!(key, half_steps)
+    transpose_notes!
+  end
+
+  def add_notes! key, steps
+    @notes << Note.starting_at(key).step_up(steps.shift)
+    add_notes!(@notes.last, steps) unless steps.empty?
+  end
+
+  def transpose_notes!
     @notes = @notes.map(&:force_sharp!) if base_note_is_sharp?
   end
 

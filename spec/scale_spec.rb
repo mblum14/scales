@@ -37,7 +37,7 @@ describe Scale do
       expect(Scale.new('Cmaj').notes).to eql(['C', 'E', 'G'])
     end
     it "can create a C#maj scale" do
-      expect(Scale.new('C#maj').notes).to eql(['C#', 'E#', 'G#'])
+      expect(Scale.new('C#maj').notes).to eql(['C#', 'F', 'G#'])
     end
 
     it "can create a Dbmaj scale" do
@@ -77,7 +77,7 @@ describe Scale do
       expect(Scale.new('Gmaj').notes).to eql(['G', 'B', 'D'])
     end
     it "can create a G#maj scale" do
-      expect(Scale.new('G#maj').notes).to eql(['G#', 'B#', 'D#'])
+      expect(Scale.new('G#maj').notes).to eql(['G#', 'C', 'D#'])
     end
   end
 end
