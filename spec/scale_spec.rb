@@ -227,70 +227,70 @@ describe Scale do
       expect(Scale.new('Abaug').notes).to eql(['Ab', 'C', 'E'])
     end
     it "can create a Aaug scale" do
-      expect(Scale.new('Aaug').notes).to eql(['A', 'C#', 'E#'])
+      expect(Scale.new('Aaug').notes).to eql(['A', 'C#', 'F'])
     end
     it "can create a A#aug scale" do
       expect(Scale.new('A#aug').notes).to eql(['A#', 'D', 'F#'])
     end
 
-    it "can create a Bbmaj scale" do
-      expect(Scale.new('Bbmaj').notes).to eql(['Bb', 'D', 'F'])
+    it "can create a Bbaug scale" do
+      expect(Scale.new('Bbaug').notes).to eql(['Bb', 'D', 'Gb'])
     end
-    it "can create a Bmaj scale" do
-      expect(Scale.new('Bmaj').notes).to eql(['B', 'D#', 'F#'])
+    it "can create a Baug scale" do
+      expect(Scale.new('Baug').notes).to eql(['B', 'D#', 'G'])
     end
-    it "can create a B#maj scale" do
-      expect(Scale.new('B#maj').notes).to eql(['B#', 'E', 'G'])
-    end
-
-    it "can create a Cbmaj scale" do
-      expect(Scale.new('Cbmaj').notes).to eql(['Cb', 'Eb', 'Gb'])
-    end
-    it "can create a Cmaj scale" do
-      expect(Scale.new('Cmaj').notes).to eql(['C', 'E', 'G'])
-    end
-    it "can create a C#maj scale" do
-      expect(Scale.new('C#maj').notes).to eql(['C#', 'F', 'G#'])
+    it "can create a B#aug scale" do
+      expect(Scale.new('B#aug').notes).to eql(['B#', 'E', 'G#'])
     end
 
-    it "can create a Dbmaj scale" do
-      expect(Scale.new('Dbmaj').notes).to eql(['Db', 'F', 'Ab'])
+    it "can create a Cbaug scale" do
+      expect(Scale.new('Cbaug').notes).to eql(['Cb', 'Eb', 'G'])
     end
-    it "can create a Dmaj scale" do
-      expect(Scale.new('Dmaj').notes).to eql(['D', 'F#', 'A'])
+    it "can create a Caug scale" do
+      expect(Scale.new('Caug').notes).to eql(['C', 'E', 'G#'])
     end
-    it "can create a D#maj scale" do
-      expect(Scale.new('D#maj').notes).to eql(['D#', 'G', 'A#'])
-    end
-
-    it "can create a Ebmaj scale" do
-      expect(Scale.new('Ebmaj').notes).to eql(['Eb', 'G', 'Bb'])
-    end
-    it "can create a Emaj scale" do
-      expect(Scale.new('Emaj').notes).to eql(['E', 'G#', 'B'])
-    end
-    it "can create a E#maj scale" do
-      expect(Scale.new('E#maj').notes).to eql(['E#', 'A', 'C'])
+    it "can create a C#aug scale" do
+      expect(Scale.new('C#aug').notes).to eql(['C#', 'F', 'A'])
     end
 
-    it "can create a Fbmaj scale" do
-      expect(Scale.new('Fbmaj').notes).to eql(['Fb', 'Ab', 'B'])
+    it "can create a Dbaug scale" do
+      expect(Scale.new('Dbaug').notes).to eql(['Db', 'F', 'A'])
     end
-    it "can create a Fmaj scale" do
-      expect(Scale.new('Fmaj').notes).to eql(['F', 'A', 'C'])
+    it "can create a Daug scale" do
+      expect(Scale.new('Daug').notes).to eql(['D', 'F#', 'A#'])
     end
-    it "can create a F#maj scale" do
-      expect(Scale.new('F#maj').notes).to eql(['F#', 'A#', 'C#'])
+    it "can create a D#aug scale" do
+      expect(Scale.new('D#aug').notes).to eql(['D#', 'G', 'B'])
     end
 
-    it "can create a Gbmaj scale" do
-      expect(Scale.new('Gbmaj').notes).to eql(['Gb', 'Bb', 'Db'])
+    it "can create a Ebaug scale" do
+      expect(Scale.new('Ebaug').notes).to eql(['Eb', 'G', 'B'])
     end
-    it "can create a Gmaj scale" do
-      expect(Scale.new('Gmaj').notes).to eql(['G', 'B', 'D'])
+    it "can create a Eaug scale" do
+      expect(Scale.new('Eaug').notes).to eql(['E', 'G#', 'C'])
     end
-    it "can create a G#maj scale" do
-      expect(Scale.new('G#maj').notes).to eql(['G#', 'C', 'D#'])
+    it "can create a E#aug scale" do
+      expect(Scale.new('E#aug').notes).to eql(['E#', 'A', 'C#'])
+    end
+
+    it "can create a Fbaug scale" do
+      expect(Scale.new('Fbaug').notes).to eql(['Fb', 'Ab', 'C'])
+    end
+    it "can create a Faug scale" do
+      expect(Scale.new('Faug').notes).to eql(['F', 'A', 'C#'])
+    end
+    it "can create a F#aug scale" do
+      expect(Scale.new('F#aug').notes).to eql(['F#', 'A#', 'D'])
+    end
+
+    it "can create a Gbaug scale" do
+      expect(Scale.new('Gbaug').notes).to eql(['Gb', 'Bb', 'D'])
+    end
+    it "can create a Gaug scale" do
+      expect(Scale.new('Gaug').notes).to eql(['G', 'B', 'D#'])
+    end
+    it "can create a G#aug scale" do
+      expect(Scale.new('G#aug').notes).to eql(['G#', 'C', 'E'])
     end
   end
 end

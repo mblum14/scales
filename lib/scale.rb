@@ -30,6 +30,7 @@ class Scale
                  when 'maj' then [0, 4, 3]
                  when 'min' then [0, 3, 4]
                  when 'dim' then [0, 3, 3]
+                 when 'aug' then [0, 4, 4]
                  else [0]
                  end
     add_notes!(key, half_steps)
@@ -46,6 +47,6 @@ class Scale
   end
 
   def identify_parts scale_name
-    /(?<key>[ABCDEFG][b#]?)(?<interval>maj|min|dim)/.match(scale_name).to_a
+    /(?<key>[ABCDEFG][b#]?)(?<interval>maj|min|dim|aug)/.match(scale_name).to_a
   end
 end
